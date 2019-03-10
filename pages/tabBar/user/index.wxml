@@ -1,0 +1,32 @@
+<view class='container'>
+<view class="top">
+  <view class="userHead"><open-data type="userAvatarUrl" class="userinfo"></open-data></view>
+  <view class="userName"><open-data type="userNickName" ></open-data></view>
+</view>
+
+<view class="order">我的订单</view>
+<view class="eat">
+<navigator url="../../subPages/nothing/nothing.wxml" class="link">
+  <image src="../../../assets/img/order_movie.png"></image>
+  <text>电影</text>
+</navigator>
+<navigator url="../../subPages/nothing/nothing.wxml" class="link bottom">
+  <image src="../../../assets/img/order_store.png"></image>
+  <text>小吃</text>
+</navigator>
+</view>
+
+<view class='other'>
+  <view class="other_item">
+    <button open-type="share" hover-class="none"><text class='iconfont icon-fenxiang1'></text> 分享给朋友</button>
+  </view>
+    <view class="other_item">
+    <button open-type="contact" hover-class="none"><text class='iconfont icon-lianxikefu'></text> 客服反馈</button>
+  </view>
+  <view class="other_item">
+    <button open-type="share" hover-class="none"><text class='iconfont icon-guanyuwomen'></text> 关于</button>
+  </view>
+
+</view>
+
+</view>

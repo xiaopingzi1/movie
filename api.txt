@@ -1,0 +1,77 @@
+
+- 热门电影
+
+地址：
+https://wx.maoyan.com/mmdb/movie/v2/list/hot.json
+
+请求方式：
+GET
+
+参数：
+limit=12
+offset=0
+ct=北京
+
+- 所在城市
+
+地址：
+https://wx.maoyan.com/hostproxy/locate/v2/rgeo
+
+请求方式：
+GET
+
+参数：
+coord=40.1619,116.62194,1
+
+- 待映（最受欢迎）
+
+地址：
+https://wx.maoyan.com/mmdb/movie/v1/list/wish/order/coming.json
+
+请求方式：
+get
+
+请求参数
+ci=1
+limit=30
+offset=0
+
+- 待映（电影列表）
+
+地址：
+https://wx.maoyan.com/mmdb/movie/v2/list/rt/order/coming.json
+
+请求方式
+get
+
+请求参数：
+ci=1
+limit=10
+
+- 待映 上拉加载
+
+地址
+https://wx.maoyan.com/mmdb/movie/list/info.json
+
+请求方式
+GET
+
+请求参数
+ci=20
+movieIds=338400,C1220890,C341516,C1212592,C246596,C1227737,C334598,C1217513,C345058,C1220736
+
+- 影院
+
+地址
+https://wx.maoyan.com/hostproxy/mmcs/cinema/v1/select/cinemas.json
+
+请求方式
+GET
+
+请求参数
+cityId=20
+limit=12
+offset=0
+channelId=40000
+lng=113.34645080566406
+lat=23.186687469482422

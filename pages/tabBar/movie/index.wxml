@@ -1,0 +1,94 @@
+<!-- 头部 -->
+<view class="header">
+    <!-- 位置 -->
+    <navigator hover-class="none" class="location">{{city}}</navigator>
+    <!-- 切换 -->
+    <view class="tabs">
+        <text bind:tap="switch" data-tab-index="hots" class="{{tabIndex == 'hots' ? 'current' : ''}}">热映</text>
+        <text bind:tap="switch" data-tab-index="plan" class="{{(tabIndex == 'plan') ? 'current' : ''}}">待映</text>
+    </view>
+    <!-- 搜索 -->
+    <navigator hover-class="none" class="search"></navigator>
+</view>
+
+<!-- 电影列表 热映 -->
+<view class="items hots" hidden="{{tabIndex != 'hots'}}">
+    <navigator url="./detail?mid={{item.id}}" wx:for="{{hots.items}}" wx:key="{{id}}">
+        <view class="item">
+            <!-- 播放按钮 -->
+            <text class="play"></text>
+            <image src="{{item.img}}"></image>
+            <!-- 信息 -->
+            <view class="meta">
+                <text class="name">{{item.nm}}</text>
+                <text class="type">{{item.cat}}</text>
+                <text class="actor">{{item.desc}}</text>
+                <text class="count">{{item.showInfo}}</text>
+            </view>
+            <!-- 状态 -->
+            <view class="status" >
+              <block wx:if="{{item.preSale === 0}}">
+                <view class="extra">
+                    {{item.mk}}<text>分</text>
+                </view>
+                <text class="btn">购票</text>
+              </block>
+
+              <block wx:else>
+                <view class="extra">
+                    {{item.wish}}<text>想看</text>
+                </view>
+                <text class="btn presell">预售</text>
+              </block>
+            </view>
+            
+        </view>
+    </navigator>
+</view>
+
+<!-- 电影列表 待映 -->
+<view class="items-wrap" hidden="{{tabIndex != 'plan'}}">
+    <text class="title">近期最受欢迎</text>
+    <scroll-view scroll-x>
+        <view class="cell" wx:for="{{plans.v1.items}}" wx:key="{{item.id}}">
+            <text class="collect"></text>
+            <navigator url="./detail">
+                <image src="{{item.img}}"></image>
+                <text class="name">{{item.nm}}</text>
+                <text class="count">{{item.wish}}人想看</text>
+                <text class="date">{{item.rt}}上映</text>
+            </navigator>
+        </view>
+    </scroll-view>
+    <!-- 列表 -->
+    <view class="items plan">
+      <block wx:for="{{plans.v2.items}}" wx:key="{{item.id}}">
+        <text class="title">{{item.comingTitle}}</text>
+        <navigator url="./detail" >
+            <view class="item">
+                <!-- 播放按钮 -->
+                <text class="play"></text>
+                <image src="{{item.img}}"></image>
+                <!-- 信息 -->
+                <view class="meta">
+                    <text class="name">{{item.nm}}</text>
+                    <text class="type">{{item.cat}}</text>
+                    <text class="actor">{{item.desc}}</text>
+                    <text class="count">{{item.date}}</text>
+                </view>
+                <!-- 状态 -->
+                
+                <view class="status">
+                    <view class="extra">
+                        <text>{{item.boxInfo}}</text>
+                    </view>
+                    <text class="btn">想看</text>
+                </view>
+            </view>
+        </navigator>
+      </block>
+    </view>
+</view>
+
+<!-- 加载更多... -->
+<text class="loading">加载更多...</text>

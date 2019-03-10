@@ -1,0 +1,50 @@
+/* pages/center/index.wxss */
+.container {
+  background: #f3f3f3;
+  width:100vm;
+  height:100vh;
+}
+.top {
+  height: 350rpx;
+  box-sizing: border-box;
+  padding:50rpx;
+  background-color: crimson;
+}
+.userName {
+  text-align: center;
+  margin-top: 40rpx;
+  color:white;
+}
+.userinfo {
+  width: 180rpx;
+  height: 180rpx;
+  margin:0 auto;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+}
+image {
+  width:100rpx;
+  height:100rpx;
+  margin-bottom:15rpx;
+}
+.order {
+  text-align:center;
+  margin-top:20rpx;
+  background-color:#fff;
+}
+.link {
+  width:107rpx;
+  height:140rpx;
+  float:left;
+  text-align:center;
+  padding:50rpx 135rpx;
+  background-color: #fff;
+}
+.bottom {
+  margin-bottom: 15rpx;
+}
+button {
+  text-align:left;
+  background-color:#fff;
+}

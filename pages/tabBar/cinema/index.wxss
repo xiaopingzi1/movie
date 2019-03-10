@@ -1,0 +1,58 @@
+/* pages/cinema/index.wxss */
+/*头部*/
+.header {
+  background-color: #FFF;
+}
+
+.header .location {
+  width: 120rpx;
+  text-align: center;
+}
+
+.header .location::after {
+  content: '';
+  display: inline-block;
+  border-width: 8rpx;
+  border-style: solid;
+  border-color: #666 transparent transparent transparent;
+  position: relative;
+  top: 4rpx;
+  left: 8rpx;
+}
+.cinema {
+  padding: 20rpx 20rpx;
+  margin-bottom: 15rpx;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.cinema .name text:first-child{
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.cinema .name text:last-child{
+  font-size: 33rpx;
+  color: red;
+  margin-left: 20rpx;
+  font-weight: 600;
+}
+.cinema .address {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25rpx;
+  margin-top: 15rpx;
+}
+.cinema .active text {
+  float: left;
+  font-size: 25rpx;
+  margin-top: 15rpx;
+  border:1px solid #ccc;
+  margin-right: 10rpx;
+  padding: 1rpx 1rpx;
+}
+.cinema .active {
+ overflow: hidden;
+ margin-bottom: 15rpx;
+}
+.cinema .card {
+  font-size: 25rpx;
+}

@@ -1,0 +1,35 @@
+<view class="header">
+    <!-- 位置 -->
+    <navigator hover-class="none" class="location">{{city}}</navigator>
+    <!-- 搜索 -->
+    <navigator hover-class="none" class="search"></navigator>
+</view>
+
+<view class="main">
+  <navigator url="#" wx:for="{{cinemas.items}}" wx:key="{{cinemas.items.cityid}}" class='cinema'>
+    <view class="name">
+      <text>{{item.nm}}</text>
+      <text>{{item.price}}元起</text>
+    </view>
+    <!-- 地址 距离-->
+    <view class='address'>
+      <text>{{item.addr}}</text>
+      <text>{{item.distance}}</text>
+    </view>
+    <!-- 影院活动 -->
+    <view>
+      <view class='active'>
+        <text wx:for="{{item.labels}}" wx:key="{{cinemas.items.cityid}}"style='color:{{item.color}};border-color:{{item.color}}'>{{item.name}}</text>
+      </view>
+    </view>
+    
+    <!-- 优惠活动和卡券 -->
+    <view class='card'>
+      <text>{{item.promotion.cardPromotionTag}}</text>
+    </view>
+    <view class='card'>
+      <text>{{item.promotion.platformActivityTag}}</text>
+    </view>
+  </navigator>
+
+</view>
